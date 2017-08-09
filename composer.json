@@ -1,0 +1,12 @@
+{
+    "name": "bg-wilkesreid/wordvars",
+    "description": "Replace tags in a .docx file.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Samuel Reid",
+            "email": "samr@bureaugravity.com"
+        }
+    ],
+    "require": {}
+}
