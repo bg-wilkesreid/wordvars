@@ -8,5 +8,8 @@
             "email": "samr@bureaugravity.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {"WordVars\\": "src/"}
+    }
 }
