@@ -28,7 +28,7 @@ class WordVars
 
   public function go() {
     copy($this->templatepath, $this->outputpath);
-    $zip = new ZipArchive;
+    $zip = new \ZipArchive;
     $zip->open($this->outputpath);
 
     $content = $zip->getFromName('word/document.xml');
