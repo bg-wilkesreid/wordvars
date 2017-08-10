@@ -17,6 +17,10 @@ class WordVars
     $this->codes = $codes;
   }
 
+  public function getCodes() {
+    return $this->codes;
+  }
+
   public function setCalculatedCodes($calculated_codes) {
     foreach ($calculated_codes as $calculated_code=>$calcvalue) {
       foreach ($this->codes as $code=>$codevalue) {
@@ -35,11 +39,11 @@ class WordVars
 
     // Do replacement
     foreach ($this->codes as $code=>$value) {
-      $content = preg_replace('%#\[(?:</w:t></w:r>(?:<w:proofErr[^/]*/>)?<w:r[^>]*><w:t[^>]*>)?'.$code.'(?:</w:t></w:r><w:proofErr[^>]*/><w:r[^>]*><w:t[^>]*>)?\]%', $value, $str);
+      $content = preg_replace('%#\[(?:</w:t></w:r>(?:<w:proofErr[^/]*/>)?<w:r[^>]*><w:t[^>]*>)?'.$code.'(?:</w:t></w:r><w:proofErr[^>]*/><w:r[^>]*><w:t[^>]*>)?\]%', $value, $content);
     }
 
     $zip->deleteName('word/document.xml');
-    $zip->addFromString('word/document.xml', $str);
+    $zip->addFromString('word/document.xml', $content);
 
     $zip->close();
   }
