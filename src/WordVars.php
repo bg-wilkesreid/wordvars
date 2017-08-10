@@ -10,7 +10,7 @@ class WordVars
 
   public function __construct($templatepath = "template.docx", $outputpath = "output.docx") {
     $this->templatepath = $templatepath;
-    $thix->outputpath = $outputpath;
+    $this->outputpath = $outputpath;
   }
 
   public function setCodes($codes) {
